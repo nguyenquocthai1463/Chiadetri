@@ -8,6 +8,8 @@ int tong(int a[], int l, int r) {
         return mid + 1;
     } else if (a[mid] % 3 == 0) {
         return 2;
+    }else if (a[mid] % 4 == 0) {
+        return 4;
     }
     return 0;
 }
