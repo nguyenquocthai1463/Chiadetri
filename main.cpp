@@ -2,23 +2,19 @@
 
 using namespace std;
 
-int tong(int a[], int l, int r) {
-    int mid = (l + r) / 2;
+int tong(int a[], int left, int right,int mid) {
     if (a[mid] % 2 == 0) {
         return mid + 1;
-    } else if (a[mid] % 3 == 0) {
-        return 2;
-    }else if (a[mid] % 4 == 0) {
-        return 4;
-    }
-    return 0;
+    } else
+        return tong(a,left+1,right)+tong (a,left,right-1);
 }
-
 int main() {
-    int base, exponent;
-    int sum;
-    cin >> base;
-    cin >> exponent;
-    cout << sum;
+    int a[10000];
+    int n,left=n-1,right=0;
+    int mid=(left+right)/2;
+    cout<<"nhap n phan tu: "<<endl;
+    cin>>n;
+    cout<<"tong mang = "<<tong(a,left,right,mid);
+
     return 0;
 }
