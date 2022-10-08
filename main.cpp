@@ -6,6 +6,8 @@ int tong(int a[], int l, int r) {
     int mid = (l + r) / 2;
     if (a[mid] % 2 == 0) {
         return mid + 1;
+    } else if (a[mid] % 3 == 0) {
+        return 2;
     }
     return 0;
 }
